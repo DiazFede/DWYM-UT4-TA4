@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import './App.css';
+import Button from './components/Button';
 
 function App() {
-  // Estado para el contador
   const [count, setCount] = useState(0);
 
-  // Función para incrementar el contador
   const increment = () => {
     setCount(count + 1);
   };
 
-  // Función para decrementar el contador
   const decrement = () => {
     setCount(count - 1);
   };
@@ -18,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <h1>Contador: {count}</h1>
-      <button onClick={increment}>Incrementar</button>
-      <button onClick={decrement}>Decrementar</button>
+      <Button onClick={increment} label="Incrementar" />
+      <Button onClick={decrement} label="Decrementar" />
     </div>
   );
 }
